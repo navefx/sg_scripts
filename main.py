@@ -87,7 +87,13 @@ import os,sys
 #
 #------------------------------------
 
-# update a Task
+# TASK ID 0
+if( sys.argv[1] == "0" ):
+    import functions.task_0 as job
+    if( job.task_0() != 0 ):
+        print "Error"
+
+# TASK ID 44
 if( sys.argv[1] == "44" ):
     import functions.task_44 as job
     if( job.task_44( sys.argv[2], sys.argv[3], sys.argv[4] ) != 0 ):
