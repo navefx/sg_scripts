@@ -87,8 +87,43 @@ import os,sys
 #
 #------------------------------------
 
-# update a Task
+# 10 Find Asset by Name
+if( sys.argv[1] == "10" ):
+    import functions.task_10 as job
+    if( len(sys.argv) == 4 ):
+        job_res = job.task_10( sys.argv[2], sys.argv[3] )
+    else:
+        job_res = job.task_11( sys.argv[2] )
+    print "Job exited code : " + str( job_res ) + "."
+
+# 11 Find Asset by Id
+if( sys.argv[1] == "11" ):
+    import functions.task_11 as job
+    if( len(sys.argv) == 4 ):
+        job_res = job.task_11( sys.argv[2], sys.argv[3] )
+    else:
+        job_res = job.task_11( sys.argv[2] )
+    print "Job exited code : " + str( job_res ) + "."
+
+# 12 Create Asset
+if( sys.argv[1] == "12" ):
+    import functions.task_12 as job
+    res = job.task_12()
+
+# 41 Find Task by Id
+if( sys.argv[1] == "41" ):
+    import functions.task_41 as job
+    if( len(sys.argv) == 4 ):
+        job_res = job.task_41( sys.argv[2], sys.argv[3] )
+    else:
+        job_res = job.task_41( sys.argv[2] )
+    print "Job exited code : " + str( job_res ) + "."
+
+# 44 Update Task
 if( sys.argv[1] == "44" ):
     import functions.task_44 as job
-    if( job.task_44( sys.argv[2], sys.argv[3], sys.argv[4] ) != 0 ):
-        print "Error"
+    if( len(sys.argv) == 6 ):
+        job_res = job.task_44( sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5] )
+    else:
+        job_res = job.task_44( sys.argv[2], sys.argv[3], sys.argv[4] )
+    print "Job exited code : " + str( job_res ) + "."
