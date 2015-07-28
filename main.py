@@ -87,6 +87,7 @@ import os,sys
 #
 #------------------------------------
 
+<<<<<<< HEAD
 # 10 Find Asset by Name
 if( sys.argv[1] == "10" ):
     import functions.task_10 as job
@@ -120,6 +121,15 @@ if( sys.argv[1] == "41" ):
     print "Job exited code : " + str( job_res ) + "."
 
 # 44 Update Task
+=======
+# TASK ID 0
+if( sys.argv[1] == "0" ):
+    import functions.task_0 as job
+    if( job.task_0() != 0 ):
+        print "Error"
+
+# TASK ID 44
+>>>>>>> origin/master
 if( sys.argv[1] == "44" ):
     import functions.task_44 as job
     if( len(sys.argv) == 6 ):
